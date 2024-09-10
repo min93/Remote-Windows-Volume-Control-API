@@ -50,7 +50,7 @@ You can use curl commands to interact with the API to control and monitor the vo
 
     bash
 
-curl -X POST http://10.102.127.2:5000/set_volume -H "Content-Type: application/json" -d "{\"level\": 30}"
+curl -X POST http://192.168.1.100:5000/set_volume -H "Content-Type: application/json" -d "{\"level\": 30}"
 
 Get Current Volume:
 
@@ -58,7 +58,7 @@ To get the current volume level:
 
 bash
 
-    curl http://10.102.127.2:5000/get_volume
+    curl http://192.168.1.100:5000/get_volume
 
 Using PowerShell Commands
 
@@ -68,26 +68,26 @@ For Windows users, PowerShell can be used to send HTTP requests:
 
     powershell
 
-Invoke-RestMethod -Uri "http://10.102.127.2:5000/set_volume" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"level": 30}'
+Invoke-RestMethod -Uri "http://192.168.1.100:5000/set_volume" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"level": 30}'
 
 Get Current Volume:
 
 powershell
 
-    Invoke-RestMethod -Uri "http://10.102.127.2:5000/get_volume" -Method Get
+    Invoke-RestMethod -Uri "http://192.168.1.100:5000/get_volume" -Method Get
 
 Using Postman
 
     Set Volume:
         Method: POST
-        URL: http://10.102.127.2:5000/set_volume
+        URL: http://192.168.1.100:5000/set_volume
         Body: Raw JSON
         Content-Type: application/json
         Data: {"level": 30}
 
     Get Current Volume:
         Method: GET
-        URL: http://10.102.127.2:5000/get_volume
+        URL: http://192.168.1.100:5000/get_volume
 
 Project Structure
 
@@ -109,3 +109,4 @@ Contributions are welcome! Please fork this repository and open a pull request t
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+by meen
